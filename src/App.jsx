@@ -5,12 +5,13 @@ import './App.css'
 
 function App() {
   
-
+const [token, setToken] = useState(null)
   return (
     <>
       <h1>buford</h1>
-      <SignUpForm /> 
-      <Authenticate />
+      <SignUpForm setToken={setToken}/> 
+      
+      <Authenticate token={token}/>
     </>
   )
 }
